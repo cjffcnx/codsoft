@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL PORTFOLIO WEBSITE</title>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<style>
+
+    body
+    {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        overflow-x: hidden;
+       
+    }
+    .hero
+    {
+        width:100vw;
+        height:100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        background-image: linear-gradient(to right, rgba(89, 87, 158, 0), rgb(9, 148, 234)),url('bgimg.jpg');
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+
+    .hero h1{
+        font-size:3.5em;
+        color:white;
+
+    }
+
+    
+   
+    nav ul li a{
+        text-decoration: none;
+        display: inline-block;
+     
+      /* border: 2px solid black; */
+      width:6em;
+      color: yellow;
+      
+    }
+
+    
+
+    nav{
+      
+     
+        display: inline-block;
+        width:100%;
+        padding-top: 0.5%;
+      
+        
+        
+        
+    }
+    .nav-container {
+        
+        background-color: black;
+        /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width:100%;
+        position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+        
+       
+       
+    }
+    nav ul{
+        list-style: none;
+        display:flex;
+        justify-content: center;
+        
+    }
+
+    .fa-solid{
+        margin-left: -250px;
+    }
+
+    .left img
+    {
+        
+        /* border:2px solid red; */
+        /* border-radius: 80%; */
+       
+       margin-top: 25%;
+        /* float:left; */
+    }
+
+    
+   
+   button {
+            background-color: green;
+            color: lightgreen;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            margin: 10px;
+            
+        }
+
+        
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .animated-button {
+            animation: pulse 2s infinite; /* Change 2s to your preferred animation duration */
+            
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 25%;
+            height: fit-content;
+            /* border: 2px solid red; */
+            position:absolute;
+            margin-left: 30%;
+          
+        }
+.mylogo{
+   
+   margin-left: 22%;
+    
+}
+        
+</style>
+<body>
+    <div class="nav-container">
+<nav>
+   
+    <ul>
+        <a class="mylogo"  style="display: inline-block; margin-left: 50px;" ><i style="color:white" class="fa-solid fa-s">rijan's Hub</i></a>
+        <li>
+            
+            
+            <a href="#"  rel="noopener noreferrer">Home</a>
+            <a href="About.html" target="_blank" rel="noopener noreferrer">About</a>
+            <a href="Service.html" target="_blank" rel="noopener noreferrer">Service</a>
+            <a href="Portfolio.html" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            <a href="Blog.html" target="_blank" rel="noopener noreferrer">Blog</a>
+        </li>
+    </ul>
+</nav>
+</div>
+
+   <section class="hero">
+   
+    <div class="left">
+       
+        <img style="margin-right: 2.5vw;" src="Untitled-removebg-preview.png" alt="">
+    </div>
+    <div class="inner-hero">
+       
+        
+       <span> <h1>Hi, I am <b style="color: greenyellow;">Srijan Gajurel</b></h1><h2 style="font-size: 2.5em;color: yellow; background-color: transparent;" id="element"></h2></span> 
+        
+        <script>
+            var typed = new Typed('#element', {
+              strings: ['Graphic Designer.', '&amp; a web developer.'],
+              typeSpeed: 50,
+              loop:true
+            });
+         
+          </script>
+          <p><strong style="color: white; background-color: black; ">I am a freelancer and I like coding very much</strong></p>
+          
+         
+        
+    </div>
+    <div class="btn" >
+    <a href="cv.pdf"><button type="button" style="background-color: red;color: green; " class="animated-button">Download CV</button></a>
+    <button type="button" class="animated-button">Work With Me</button>
+</div>
+   </section> 
+   
+</div>
+
+   
+</body>
+
+<script src="https://kit.fontawesome.com/0a117d2ad3.js" crossorigin="anonymous"></script>
+
+</html>

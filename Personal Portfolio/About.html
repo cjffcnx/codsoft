@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My About Portfolio</title>
+</head>
+
+<style>
+    body
+    {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        overflow-x: hidden;
+       
+    }
+    
+    
+
+   
+
+    
+   
+    nav ul li a{
+        text-decoration: none;
+        display: inline-block;
+     
+      /* border: 2px solid black; */
+      width:6em;
+      color: yellow;
+      
+    }
+
+    
+
+    nav{
+      
+     
+        display: inline-block;
+        width:fit-content;
+        padding-top: 0.5%;
+       
+        
+        
+        
+    }
+    .nav-container {
+        
+        background-color: black;
+        /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width:100%;
+        position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+        
+       
+       
+    }
+    nav ul{
+        list-style: none;
+        display:flex;
+        justify-content: center;
+        
+    }
+
+    .fa-solid{
+        margin-left: -250px;
+    }
+
+    .left img
+    {
+        
+        /* border:2px solid red; */
+        /* border-radius: 80%; */
+       
+       margin-top: 25%;
+        /* float:left; */
+    }
+
+    
+   
+   button {
+            background-color: green;
+            color: lightgreen;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            margin: 10px;
+            
+        }
+
+        
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .animated-button {
+            animation: pulse 2s infinite; /* Change 2s to your preferred animation duration */
+            
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 25%;
+            height: fit-content;
+            /* border: 2px solid red; */
+            position:absolute;
+            margin-left: 30%;
+          
+        }
+.mylogo{
+   
+   margin-left: 22%;
+    
+}
+
+section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width:100vw;
+        height:100vh;
+
+      
+        text-align: center;
+
+        background-image: linear-gradient(to right, rgba(89, 87, 158, 0), rgb(9, 148, 234)),url('aqua.gif');
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+
+        .image-area {
+            flex: 1;
+            text-align: center;
+        }
+
+        .details-area {
+            flex: 2;
+            padding: 20px;
+            
+            /* margin-bottom:auto; */
+            /* border:2px solid red; */
+            text-align: justify;
+            
+            
+        }
+
+        
+
+        .details-area h1 {
+            
+            color: #333;
+            margin-bottom: 10px;
+          
+        }
+
+        .details-area p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+           max-height: 600px;
+            border-radius: 8px;
+        }
+
+        .details area h3,p{
+            display: inline;
+        }
+
+        .details-container {
+    flex: 2;
+    padding: 20px;
+    text-align: justify;
+    /* border: 2px solid red; */
+    margin-left: 20px; /* Adjust this margin to move the details area */
+    background: linear-gradient(to right, #04e7e761, #ffa6005e);
+   margin-right: 10.5em;
+}
+
+.education{
+display:flex;
+justify-content: space-around;
+margin:50px auto;
+}
+
+.education-area{
+    max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experience-area{
+margin-right: 15rem;
+
+}
+
+
+        .education {
+            margin-bottom: 20px;
+        }
+        .education h1 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .entry {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            background-color: #ff0000;
+            margin-right: 10px;
+        }
+        .content {
+            flex: 1;
+            padding:15px;
+            margin: 25px auto;
+        }
+        .experience{
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+
+        .award{
+display:flex;
+justify-content: space-around;
+margin:50px auto;
+
+           
+            width:100vw;
+        height:100vh;
+
+      
+        text-align: center;
+
+        background-image: linear-gradient(to right, rgba(89, 87, 158, 0), rgb(9, 148, 234)),url('ans.jpg');
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+}
+
+.award-list{
+    max-width: 600px;
+            
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: transparent;
+            color: white;
+            background: linear-gradient(to right, #04e7e761, #00686803);
+            margin-right: 13em;
+            
+}
+
+.skill-area{
+margin-right: 15rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+background-color: white;
+height:100%;
+width:13.5em;
+margin-right: 28em;
+display:inline-block;
+background-color: transparent;
+color: white;
+background: linear-gradient(to right, #04e7e761, #00fbff00);
+}
+
+
+
+
+        .award{
+            margin-bottom: 20px;
+        }
+        .award h1 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .entry {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            background-color: #ff0000;
+            margin-right: 10px;
+        }
+        .content {
+            flex: 1;
+            padding:15px;
+            margin: 25px auto;
+        }
+        .skills{
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+</style>
+<body>
+    <div class="nav-container">
+<nav>
+   
+    <ul>
+        <a class="mylogo"  style="display: inline-block; margin-left: 50px;" ><i style="color:white" class="fa-solid fa-s">rijan's Hub</i></a>
+        <li>
+            
+            
+            <a href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+            <a href="#"  rel="noopener noreferrer">About</a>
+            <a href="Service.html" target="_blank" rel="noopener noreferrer">Service</a>
+            <a href="Portfolio.html" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            <a href="Blog.html" target="_blank" rel="noopener noreferrer">Blog</a>
+        </li>
+    </ul>
+</nav>
+</div>
+<section>
+
+    <div class="image-area">
+       
+<img src="img.jpg" alt="" srcset="">
+    </div>
+<center>
+    <div class="details-container">
+    <div class="details-area">
+        <h1 style="color: yellow;">About me</h1>
+        <p style="color: black; font-weight: bolder;">I am Srijan Gajurel. I am a tech enthusiastic. I love programming very much.</p>
+        
+        <h3>Name:&nbsp;&nbsp;<p style="color: darkblue;">Srijan Gajurel</p></h3>
+        <h3>Address:&nbsp;&nbsp;<p style="color: darkblue;">44600,Kageswori Manohara-06,Jorpati,Kathmandu</p></h3>
+        <h3>Email:&nbsp;&nbsp;<p style="color: darkblue;">srijangajurel82@gmail.com</p></h3>
+        <h3>Phone&nbsp;&nbsp;<p style="color: darkblue;">+977-9840031714</p></h3>
+        <button>Explore more</button>
+
+       
+    </div>
+</div>
+</center>
+
+</section>
+
+<div class="education">
+    <div class="education-area">
+<h1>Education</h1>
+<div class="entry">
+    <div class="icon"></div>
+    <div class="content">
+        SEE (2017) - Arunima Shishu Sadan
+    </div>
+</div>
+
+<div class="entry">
+    <div class="icon"></div>
+    <div class="content">
+        +2(2017-2019) -Reliance International Academy(RIA)
+    </div>
+</div>
+
+<div class="entry">
+    <div class="icon"></div>
+    <div class="content">
+        Running- Bachelor of Engineering in Computer Science (BE Computer)-<p style="margin-left: 1%;">Nepal Engineering College</p>
+    </div>
+</div>
+
+
+    </div>
+    <div class="experience">
+    <div class="experience-area">
+        <h1>Experience</h1>
+        <div class="entry">
+            <div class="icon"></div>
+            <div class="content">
+                Web Developer(2019-2020)-ABC Company
+            </div>
+        </div>
+        
+        <div class="entry">
+            <div class="icon"></div>
+            <div class="content">
+                Software Engineering(2020-2021) -XYZ Company
+            </div>
+        </div>
+        
+        <div class="entry">
+            <div class="icon"></div>
+            <div class="content">
+                Your job title here
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="award">
+        <div class="award-list">
+    <h1>Award</h1>
+    <div class="entry">
+        <div class="icon"></div>
+        <div class="content">
+            320 Happy Clients
+        </div>
+    </div>
+    
+    <div class="entry">
+        <div class="icon"></div>
+        <div class="content">
+            480 Running Designs    </div>
+    </div>
+    
+    <div class="entry">
+        <div class="icon"></div>
+        <div class="content">
+            125 Award Win    </div>
+    </div>
+    <div class="entry">
+        <div class="icon"></div>
+        <div class="content">
+           680 Jobs    </div>
+    </div>
+    
+    
+        </div>
+        <div class="">
+        <div class="skill-area">
+            <h1>Skills</h1>
+            <div class="entry">
+                <div class="icon"></div>
+                <div class="content">
+                   HTML/ CSS            </div>
+            </div>
+            
+            <div class="entry">
+                <div class="icon"></div>
+                <div class="content">
+                    Wordpress
+                </div>
+            </div>
+            
+            <div class="entry">
+                <div class="icon"></div>
+                <div class="content">
+                   Photoshop
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+    
+    
+    
+   
+
+   
+</body>
+    
+        
+        
+
+<!-- <script src="https://kit.fontawesome.com/0a117d2ad3.js" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script> -->
+
+
+</html>

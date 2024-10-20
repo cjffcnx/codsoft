@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Calculator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pridi:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #091921;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://th.bing.com/th/id/R.b851b00c9ad6432584e811b337aa1633?rik=6Iw5c1XI0Jrc%2bg&riu=http%3a%2f%2fcdn.wallpapersafari.com%2f49%2f74%2fuCHg6v.jpg&ehk=rpcj2phclSnxddsYSLSI4R2NAJeifIQjJbs8KCnMt84%3d&risl=&pid=ImgRaw&r=0');
+            background-size: cover;
+            background-blend-mode: overlay;
+            font-family: "Pridi", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .main {
+            position: relative;
+            width: 20rem;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 15px;
+            background: rgba(45, 40, 53, 0.95);
+            backdrop-filter: blur(15px);
+            box-shadow: 5px 5px 30px black;
+            transition: transform 0.3s ease, background 0.5s;
+        }
+
+        .display {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.8rem;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: right;
+            background-color: #fff;
+            border: none;
+            color: black;
+        }
+
+        .calc {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .btn {
+            font-size: 1.5rem;
+            padding: 10px;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #e2e9e556;
+            box-shadow: 0 4px 30px rgb(25, 24, 24);
+            backdrop-filter: blur(4.7px);
+            border: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .clear {
+            background-color: red;
+        }
+
+        .equal {
+            background-color: green;
+        }
+
+        .multiply {
+            background-color: rgb(19, 157, 225);
+        }
+
+        .subtract {
+            background-color: purple;
+        }
+
+        .add {
+            background-color: rgb(118, 118, 172);
+        }
+
+        .theme-toggler {
+            position: absolute;
+            top: -50px;
+            right: 5px;
+            padding: 10px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-toggler i {
+            font-size: 24px;
+        }
+
+        .dark {
+            background: rgba(25, 25, 25, 0.95);
+            color: white;
+        }
+
+        .dark .display {
+            background-color: #333;
+            color: white;
+        }
+
+        .dark .btn {
+            background-color: #444;
+            color: white;
+        }
+
+        .dark .clear {
+            background-color: #b30000;
+        }
+
+        .dark .equal {
+            background-color: #006400;
+        }
+
+        .dark .multiply {
+            background-color: #1e90ff;
+        }
+
+        .dark .subtract {
+            background-color: #9400d3;
+        }
+
+        .dark .add {
+            background-color: #8a2be2;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+
+    <div class="main">
+        <div id="theme-toggler" class="theme-toggler"><i class="ri-moon-fill"></i></div>
+        <input type="text" id="display" class="display" readonly>
+        <div class="calc">
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn clear">C</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn multiply">*</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn subtract">-</button>
+            <button class="btn">0</button>
+            <button class="btn">00</button>
+            <button class="btn add">+</button>
+            <button style="color:#fff; background-color: #8a2be2;" class="btn">DEL</button>
+            <button class="btn percent">%</button>
+            <button class="btn">.</button>
+            <button style=" background-color: #0c5d78;" class="btn divide">/</button>
+            <button class="btn equal">=</button>
+        </div>
+    </div>
+
+    <style>
+        .numbered-list {
+            list-style-type: decimal;
+            margin: 0;
+            padding: 0;
+        }
+
+        .numbered-list li {
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .tutorial {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            margin-left: 20px;
+            background: linear-gradient(rgba(219, 207, 105, 0.432), rgba(122, 107, 205, 0.712));
+            border-radius: 5%;
+        }
+
+        .tutorial-card {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #fff;
+            background: linear-gradient(rgba(92, 169, 224, 0.406), rgba(120, 119, 121, 0.174));
+        }
+    </style>
+
+    <section class="tutorial">
+        <h2 style="color: #fff; font-size: 34px;">Tutorial</h2>
+        <div class="tutorial-card">
+            <h2 style="margin-bottom:15px;"><strong>Basic Operations:</strong></h2>
+            <ol class="numbered-list">
+                <li>Enter the first number using the numbers in the calculator shown.</li>
+                <li>Select an operation (+, -, *, /,%).</li>
+                <li>Enter the second number.</li>
+                <li>Press the "=" button to get the result.</li>
+                <li>Press the "C" button to clear the entire calculation.</li>
+                <li>Press the "DEL" button to delete the last digit entered.</li>
+            </ol>
+        </div>
+    </section>
+
+ <Script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const display = document.getElementById('display');
+    const themeToggler = document.getElementById('theme-toggler');
+    const mainContainer = document.querySelector('.main');
+    let isDark = true;
+
+    themeToggler.addEventListener('click', () => {
+        isDark = !isDark;
+        mainContainer.classList.toggle('dark', isDark);
+        themeToggler.innerHTML = isDark ? `<i class="ri-moon-fill"></i>` : `<i class="ri-sun-fill"></i>`;
+    });
+
+    function insert(value) {
+        display.value += value;
+    }
+
+    function calculate() {
+        let currentValue = display.value;
+        if (currentValue.includes('%')) {
+            currentValue = currentValue.replace(/(\d+)%/g, (match, p1) => {
+                return parseFloat(p1) / 100;
+            });
+        }
+
+        try {
+            display.value = eval(currentValue);
+        } catch {
+            display.value = 'Error';
+        }
+    }
+
+    function clearDisplay() {
+        display.value = '';
+    }
+
+    document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const value = e.target.textContent;
+            if (value === 'C') {
+                clearDisplay();
+            } else if (value === 'DEL') {
+                display.value = display.value.slice(0, -1);
+            } else if (value === '=') {
+                calculate();
+            } else {
+                insert(value);
+            }
+        });
+    });
+});
+
+ </Script>
+</body>
+
+</html>
